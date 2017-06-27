@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PreviewViewController" customModule="Fusion" customModuleProvider="target">
+            <connections>
+                <outlet property="generateButton" destination="s5m-IJ-m5S" id="boP-m0-MrD"/>
+                <outlet property="previewHeightConstraint" destination="AEQ-Fg-GHI" id="T6P-Pe-Syv"/>
+                <outlet property="previewImageView" destination="rO8-X7-5n3" id="6X4-up-m1p"/>
+                <outlet property="previewWidthConstraint" destination="MPU-gp-M2F" id="k8Q-A9-X22"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s5m-IJ-m5S">
+                    <rect key="frame" x="0.0" y="619" width="375" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="8BF-Fs-U0L"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="Button">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="saveAction:" destination="-1" eventType="touchUpInside" id="kOz-O4-nWL"/>
+                    </connections>
+                </button>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2id-Jk-dqh">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="619"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rO8-X7-5n3">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="128" id="AEQ-Fg-GHI"/>
+                                <constraint firstAttribute="width" constant="240" id="MPU-gp-M2F"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="rO8-X7-5n3" firstAttribute="leading" secondItem="2id-Jk-dqh" secondAttribute="leading" id="8xh-oQ-GEh"/>
+                        <constraint firstAttribute="bottom" secondItem="rO8-X7-5n3" secondAttribute="bottom" id="bli-Rs-JB7"/>
+                        <constraint firstItem="rO8-X7-5n3" firstAttribute="top" secondItem="2id-Jk-dqh" secondAttribute="top" id="klR-Xf-ay8"/>
+                        <constraint firstAttribute="trailing" secondItem="rO8-X7-5n3" secondAttribute="trailing" id="ofR-Dg-Nwl"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="s5m-IJ-m5S" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="4bo-1J-n49"/>
+                <constraint firstItem="2id-Jk-dqh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="60n-Cq-U0Z"/>
+                <constraint firstItem="s5m-IJ-m5S" firstAttribute="top" secondItem="2id-Jk-dqh" secondAttribute="bottom" id="BnH-aI-aEB"/>
+                <constraint firstAttribute="trailing" secondItem="2id-Jk-dqh" secondAttribute="trailing" id="R6E-IL-gI1"/>
+                <constraint firstItem="2id-Jk-dqh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="VCq-Hc-9Ei"/>
+                <constraint firstAttribute="bottom" secondItem="s5m-IJ-m5S" secondAttribute="bottom" id="aWX-YL-Tf4"/>
+                <constraint firstAttribute="trailing" secondItem="s5m-IJ-m5S" secondAttribute="trailing" id="thK-zm-cb1"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
